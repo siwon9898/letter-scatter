@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+body {
+  font-family: "goorm" !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* font  */
+@font-face {
+  font-family: "Merriweather";
+  font-weight: 100;
+  src: url("./assets/fonts/merriweather/Merriweather-Light.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Merriweather";
+  font-weight: 300;
+  src: url("./assets/fonts/merriweather/Merriweather-Regular.ttf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "Merriweather";
+  font-weight: 700;
+  src: url("./assets/fonts/merriweather/Merriweather-Bold.ttf");
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "Merriweather";
+  font-weight: 800;
+  src: url("./assets/fonts/merriweather/Merriweather-Black.ttf");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: "goorm";
+  font-weight: 100;
+  src: url("./assets/fonts/goorm/goorm-sans-regular.woff");
+}
+
+@font-face {
+  font-family: "goorm";
+  font-weight: 300;
+  src: url("./assets/fonts/goorm/goorm-sans-medium.woff");
+}
+
+@font-face {
+  font-family: "goorm";
+  font-weight: 700;
+  src: url("./assets/fonts/goorm/goorm-sans-bold.woff");
 }
