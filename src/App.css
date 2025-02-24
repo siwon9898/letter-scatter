@@ -1,5 +1,5 @@
 body {
-  font-family: "goorm" !important;
+  font-family: "42dots" !important;
 }
 
 /* font  */
@@ -43,4 +43,40 @@ body {
   font-family: "goorm";
   font-weight: 700;
   src: url("./assets/fonts/goorm/goorm-sans-bold.woff");
+}
+
+@font-face {
+  font-family: "42dots";
+  font-weight: 100;
+  src: url("./assets/fonts/42dots/42dotSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "42dots";
+  font-weight: 400;
+  src: url("./assets/fonts/42dots/42dotSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "42dots";
+  font-weight: 500;
+  src: url("./assets/fonts/42dots/42dotSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "42dots";
+  font-weight: 600;
+  src: url("./assets/fonts/42dots/42dotSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "42dots";
+  font-weight: 700;
+  src: url("./assets/fonts/42dots/42dotSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "42dots";
+  font-weight: 800;
+  src: url("./assets/fonts/42dots/42dotSans-ExtraBold.ttf");
 }

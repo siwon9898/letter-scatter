@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { styled } from "@mui/system";
-import { Typography } from "@mui/material";
+import { Box, styled } from "@mui/system";
+import { Input, Typography } from "@mui/material";
 
 const LETTER_SIZE = 30; // 글자의 크기
-const SPACING = LETTER_SIZE * 2; // 글자 간 간격
+const SPACING = LETTER_SIZE * 1.6; // 글자 간 간격
 const MAX_SPREAD = 100; // 마우스 반발 최대 거리
 const PUSH_FORCE = 0.5; // 충돌 시 튕겨나는 힘
 
@@ -17,10 +17,14 @@ const getInitialPositions = (sentence: string) => {
   }));
 };
 
-const AnimatedText = (props: { sentence: string }) => {
-  const [letters, setLetters] = useState(getInitialPositions(props.sentence));
+const AnimatedText = ({ sentence }: { sentence: string }) => {
+  const [letters, setLetters] = useState(getInitialPositions(sentence));
   const mousePos = useRef({ x: 0, y: 0 });
   const animationFrameId = useRef<number | null>(null);
+
+  useEffect(() => {
+    setLetters(getInitialPositions(sentence)); // 새로운 문장 입력 시 글자 위치 초기화
+  }, [sentence]);
 
   const handleMouseMove = (e: MouseEvent) => {
     mousePos.current = {
@@ -107,24 +111,45 @@ const AnimatedText = (props: { sentence: string }) => {
 
 const SentenceScatter = () => {
   const [sentence, setSentence] = useState("Scatter Letters");
+  const inputRef = useRef<HTMLInputElement>(null);
+
   return (
-    <>
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative",
+      }}
+    >
       <AnimatedText sentence={sentence} />
-      <ScatterButton>Scatter your own message..</ScatterButton>
-    </>
+      <CustomBox>
+        <Input
+          inputRef={inputRef}
+          spellCheck={false}
+          placeholder="문장을 입력한 후 엔터키를 눌러보세요 :)"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              setSentence(e.currentTarget.value);
+              e.currentTarget.value = ""; // 입력 필드 초기화
+            }
+          }}
+        />
+      </CustomBox>
+    </div>
   );
 };
 
-const ScatterButton = styled(Typography)({
+const CustomBox = styled(Box)({
   position: "absolute",
-  top: "60%",
-  fontSize: "18px",
-  cursor: "pointer",
-  color: "#fff",
-  mixBlendMode: "difference",
-  fontWeight: 200,
-  "&:hover": {
-    textDecoration: "underline",
+  bottom: "10%",
+  textAlign: "center",
+  width: "400px",
+  "& .MuiInput-root": {
+    width: "100%",
   },
 });
 

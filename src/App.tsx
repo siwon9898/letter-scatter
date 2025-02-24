@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import FullScatter from "./pages/FullScatter";
 import SentenceScatter from "./pages/SentenceScatter";
 import "./App.css";
+import { styled, Typography } from "@mui/material";
 
-export default function App() {
+const App = () => {
+  const [isPlayground, setIsPlayground] = useState(false);
   // return <FullScatter />;
-  const style = {};
+
   return (
     <div
       style={{
@@ -22,7 +24,27 @@ export default function App() {
         overflow: "hidden",
       }}
     >
-      <SentenceScatter />
+      <ModeTypo onClick={() => setIsPlayground(!isPlayground)}>
+        {isPlayground ? "Scatter Sentences" : "Scatter Playground"}
+      </ModeTypo>
+      {isPlayground ? <FullScatter /> : <SentenceScatter />}
     </div>
   );
-}
+};
+
+const ModeTypo = styled(Typography)({
+  position: "absolute",
+  top: "50px",
+  right: "100px",
+  cursor: "pointer",
+  fontWeight: 600,
+  zIndex: 10,
+  mixBlendMode: "difference",
+  color: "#fff",
+  background: "rgba(0,0,0,0.2)",
+  backdropFilter: "blur(30px)",
+  padding: "10px 20px",
+  borderRadius: "30px",
+});
+
+export default App;
