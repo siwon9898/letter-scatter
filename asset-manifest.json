@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/letter-scatter/static/css/main.0180d79a.css",
+    "main.js": "/letter-scatter/static/js/main.693c5732.js",
+    "static/js/453.6cfef454.chunk.js": "/letter-scatter/static/js/453.6cfef454.chunk.js",
+    "static/media/42dotSans-Light.ttf": "/letter-scatter/static/media/42dotSans-Light.37c9aab7a51119fa0c1f.ttf",
+    "static/media/42dotSans-Bold.ttf": "/letter-scatter/static/media/42dotSans-Bold.fcc89e9b0d453a9740fd.ttf",
+    "static/media/42dotSans-Regular.ttf": "/letter-scatter/static/media/42dotSans-Regular.a954965a5fff2b36fad3.ttf",
+    "static/media/42dotSans-ExtraBold.ttf": "/letter-scatter/static/media/42dotSans-ExtraBold.617a395f3b03e5eecda9.ttf",
+    "static/media/42dotSans-Medium.ttf": "/letter-scatter/static/media/42dotSans-Medium.aa150013b3df4a6ddc46.ttf",
+    "static/media/42dotSans-SemiBold.ttf": "/letter-scatter/static/media/42dotSans-SemiBold.ff031d365c8b1746393c.ttf",
+    "static/media/goorm-sans-medium.woff": "/letter-scatter/static/media/goorm-sans-medium.3eb062baa468a866f59c.woff",
+    "static/media/goorm-sans-regular.woff": "/letter-scatter/static/media/goorm-sans-regular.bb6af50bd995c07463a3.woff",
+    "static/media/goorm-sans-bold.woff": "/letter-scatter/static/media/goorm-sans-bold.05b0f00f4dd0fcfe5b1c.woff",
+    "static/media/Merriweather-Regular.ttf": "/letter-scatter/static/media/Merriweather-Regular.da67ca8c38ef44c4773d.ttf",
+    "static/media/Merriweather-Light.ttf": "/letter-scatter/static/media/Merriweather-Light.43706a2883eb57c79284.ttf",
+    "static/media/Merriweather-Bold.ttf": "/letter-scatter/static/media/Merriweather-Bold.ae39f743fdcf8f64531e.ttf",
+    "static/media/Merriweather-Black.ttf": "/letter-scatter/static/media/Merriweather-Black.cfe2aa3843d8cb416e1a.ttf",
+    "index.html": "/letter-scatter/index.html",
+    "main.0180d79a.css.map": "/letter-scatter/static/css/main.0180d79a.css.map",
+    "main.693c5732.js.map": "/letter-scatter/static/js/main.693c5732.js.map",
+    "453.6cfef454.chunk.js.map": "/letter-scatter/static/js/453.6cfef454.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0180d79a.css",
+    "static/js/main.693c5732.js"
+  ]
+}
